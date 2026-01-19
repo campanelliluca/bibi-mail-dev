@@ -17,7 +17,7 @@ android {
         applicationId = "it.bibi.mail"
         testApplicationId = "it.bibi.mail.tests"
 
-        versionCode = 4
+        versionCode = 1
         versionName = "1.0.0"
 
         buildConfigField("String", "CLIENT_INFO_APP_NAME", "\"Bibi Mail\"")
