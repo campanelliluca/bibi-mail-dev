@@ -22,7 +22,12 @@ android {
 
         buildConfigField("String", "CLIENT_INFO_APP_NAME", "\"Bibi Mail\"")
     }
-
+    // fabersoft codice
+    androidResources {
+        // Teniamo solo Inglese e Italiano
+        localeFilters += listOf("en", "it")
+    }
+/*
     androidResources {
         // Keep in sync with the resource string array "supported_languages"
         localeFilters += listOf(
@@ -81,7 +86,7 @@ android {
             "zh-rTW",
         )
     }
-
+*/
     signingConfigs {
         val useUploadKey = properties.getOrDefault("tb.useUploadKey", "true") == "true"
 
