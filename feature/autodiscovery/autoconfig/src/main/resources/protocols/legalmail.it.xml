@@ -1,0 +1,23 @@
+<clientConfig version="1.1">
+    <emailProvider id="legalmail.it">
+        <domain>legalmail.it</domain>
+        <displayName>Legalmail</displayName>
+        <displayShortName>Legalmail</displayShortName>
+
+        <incomingServer type="imap">
+            <hostname>mbox.cert.legalmail.it</hostname>
+            <port>993</port>
+            <socketType>SSL</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </incomingServer>
+
+        <outgoingServer type="smtp">
+            <hostname>sendm.cert.legalmail.it</hostname>
+            <port>465</port>
+            <socketType>SSL</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </outgoingServer>
+    </emailProvider>
+</clientConfig>

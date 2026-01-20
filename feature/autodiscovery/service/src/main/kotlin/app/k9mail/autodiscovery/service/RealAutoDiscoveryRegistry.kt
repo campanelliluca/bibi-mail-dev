@@ -1,5 +1,7 @@
 package app.k9mail.autodiscovery.service
 
+import app.k9mail.autodiscovery.autoconfig.FaberSoftAutoconfigDiscovery
+
 import app.k9mail.autodiscovery.api.AutoDiscovery
 import app.k9mail.autodiscovery.api.AutoDiscoveryRegistry
 import app.k9mail.autodiscovery.autoconfig.AutoconfigUrlConfig
@@ -25,6 +27,7 @@ class RealAutoDiscoveryRegistry(
             autoconfigUrlConfig: AutoconfigUrlConfig = defaultAutoconfigUrlConfig,
         ): List<AutoDiscovery> {
             return listOf(
+                FaberSoftAutoconfigDiscovery(), // Fabersoft autodiscovery
                 createProviderAutoconfigDiscovery(
                     okHttpClient = okHttpClient,
                     config = autoconfigUrlConfig,

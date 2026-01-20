@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientConfig version="1.1">
+    <emailProvider id="mobile-mail.it">
+        <domain>fabersoft.it</domain>
+
+        <displayName>FaberSoft Mail</displayName>
+        <displayShortName>FaberSoft</displayShortName>
+
+        <incomingServer type="imap">
+            <hostname>imap.mobile-mail.it</hostname>
+            <port>993</port>
+            <socketType>SSL</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </incomingServer>
+
+        <outgoingServer type="smtp">
+            <hostname>smtp.mobile-mail.it</hostname>
+            <port>465</port>
+            <socketType>SSL</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </outgoingServer>
+    </emailProvider>
+</clientConfig>

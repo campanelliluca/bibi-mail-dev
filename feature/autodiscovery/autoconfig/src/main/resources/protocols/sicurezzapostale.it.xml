@@ -1,0 +1,23 @@
+<clientConfig version="1.1">
+    <emailProvider id="sicurezzapostale.it">
+        <domain>sicurezzapostale.it</domain>
+        <displayName>Namirial PEC</displayName>
+        <displayShortName>Namirial</displayShortName>
+
+        <incomingServer type="imap">
+            <hostname>pro.sicurezzapostale.it</hostname>
+            <port>993</port>
+            <socketType>SSL</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </incomingServer>
+
+        <outgoingServer type="smtp">
+            <hostname>pro.sicurezzapostale.it</hostname>
+            <port>465</port>
+            <socketType>SSL</socketType>
+            <username>%EMAILADDRESS%</username>
+            <authentication>password-cleartext</authentication>
+        </outgoingServer>
+    </emailProvider>
+</clientConfig>
