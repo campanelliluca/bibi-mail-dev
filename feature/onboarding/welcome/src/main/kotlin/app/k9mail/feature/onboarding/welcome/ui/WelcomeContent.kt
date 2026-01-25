@@ -33,7 +33,7 @@ import app.k9mail.feature.onboarding.welcome.R
 import net.thunderbird.core.ui.compose.common.modifier.testTagAsResourceId
 
 private const val CIRCLE_COLOR = 0xFFEEEEEE
-private const val CIRCLE_SIZE_DP = 200
+private const val CIRCLE_SIZE_DP = 250
 private const val LOGO_SIZE_DP = 125
 
 @Composable
@@ -98,15 +98,16 @@ private fun WelcomeLogo(
     ) {
         Box(
             modifier = Modifier
-                .clip(CircleShape)
-                .background(Color(CIRCLE_COLOR))
+                // Abbiamo rimosso .clip(CircleShape) e .background
+                // Ora il contenitore è trasparente e non ha forma
                 .size(CIRCLE_SIZE_DP.dp),
         ) {
             Image(
                 painter = painterResource(id = MainTheme.images.logo),
                 contentDescription = null,
                 modifier = Modifier
-                    .size(LOGO_SIZE_DP.dp)
+                    // Aumentiamo la dimensione del logo per occupare tutto lo spazio
+                    .size(CIRCLE_SIZE_DP.dp)
                     .align(Alignment.Center),
             )
         }
