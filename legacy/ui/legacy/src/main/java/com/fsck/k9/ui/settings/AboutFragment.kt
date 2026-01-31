@@ -117,6 +117,13 @@ class AboutFragment : Fragment() {
                                 ),
                             )
                         },
+                        displayPrivacyPolicy = {
+                            dispatch(
+                                Event.OnSectionContentClick(
+                                    "https://www.fabersoft.it/informativa-privacy/GDPR.0.3.pdf",
+                                ),
+                            )
+                        },
                     )
                 }
             }
@@ -191,9 +198,9 @@ fun AboutScreen(
     displayLicense: () -> Unit = {},
     displayWebSite: () -> Unit = {},
     displayForum: () -> Unit = {},
+    displayPrivacyPolicy: () -> Unit = {},
 ) {
     val scrollState = rememberScrollState()
-    val context = LocalContext.current
     Surface(
         modifier = Modifier
             .fillMaxSize(),
@@ -240,6 +247,13 @@ fun AboutScreen(
                 sectionText = stringResource(R.string.user_forum_url),
                 sectionImageId = DesignSystemR.drawable.ic_forum,
                 onClick = displayForum,
+            )
+
+            SectionContent(
+                sectionLabel = stringResource(R.string.privacy_policy_title),
+                sectionText = "https://www.fabersoft.it/informativa-privacy/GDPR.0.3.pdf",
+                sectionImageId = DesignSystemR.drawable.ic_info,
+                onClick = displayPrivacyPolicy,
             )
 
             SectionTitle(title = librariesTitle)

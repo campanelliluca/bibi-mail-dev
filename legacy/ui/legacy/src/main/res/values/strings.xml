@@ -4,7 +4,7 @@
 
     <!-- Used in the about dialog -->
     <string name="about_app_authors_k9">The K-9 Dog Walkers</string>
-    <string name="about_app_authors_thunderbird">Thunderbird Mobile Team</string>
+    <string name="about_app_authors_thunderbird">Bibi Mail contributors and the Thunderbird community</string>
     <string name="open_camera">Open Camera</string>
     <string name="attach_file">Attach File</string>
     <string name="camera_permission_denied">Camera Permission Denied! Unable to take photo</string>
@@ -1100,7 +1100,7 @@ You can keep this message and use it as a backup for your secret key. If you wan
     <!-- Title of the "Usage and technical data" setting used in the "data collection" section of the general settings screen -->
     <string name="settings_ui_telemetry_title">Usage and technical data</string>
     <!-- Description of the "Usage and technical data" setting used in the "data collection" section of the general settings screen -->
-    <string name="settings_ui_telemetry_description">Shares performance, usage, hardware and customization data about this app with Mozilla to help us make Thunderbird better</string>
+    <string name="settings_ui_telemetry_description">Share performance, usage, hardware and customization data for this app with contributors to help us improve Bibi Mail</string>
     <string name="archiving_not_available_for_this_account">Archiving is not available for this account.</string>
     <!-- Debug/testing menu items -->
     <string name="debug_invalidate_access_token">Test: Invalidate access token</string>
@@ -1116,4 +1116,5 @@ You can keep this message and use it as a backup for your secret key. If you wan
     <string name="debug_invalidate_access_token_cannot_modify">Could not modify stored access token. Try local invalidation.</string>
     <string name="debug_invalidate_access_token_already_modified">Stored access token already modified.</string>
     <string name="debug_feature_flags">DEBUG: Feature Flags</string>
+    <string name="privacy_policy_title">Privacy Policy (GDPR)</string>
 </resources>
