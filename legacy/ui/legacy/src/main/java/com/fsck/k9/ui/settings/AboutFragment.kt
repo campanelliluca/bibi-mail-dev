@@ -258,6 +258,22 @@ fun AboutScreen(
 
             SectionTitle(title = librariesTitle)
             LibraryList(libraries = libraries)
+            // Aggiungiamo un titolo per la sezione legale
+            SectionTitle(title = stringResource(R.string.legal_notes_title))
+
+            // Inseriamo il testo del disclaimer
+            TextBodyMedium(
+                text = stringResource(R.string.disclaimer_text),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(
+                        horizontal = MainTheme.spacings.double,
+                        vertical = MainTheme.spacings.default
+                    )
+            )
+
+            // Aggiungiamo un piccolo spazio finale per non farlo stare attaccato al bordo
+            Spacer(modifier = Modifier.padding(bottom = MainTheme.spacings.double))
         }
     }
 }

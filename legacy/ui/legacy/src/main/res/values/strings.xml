@@ -1117,4 +1117,6 @@ You can keep this message and use it as a backup for your secret key. If you wan
     <string name="debug_invalidate_access_token_already_modified">Stored access token already modified.</string>
     <string name="debug_feature_flags">DEBUG: Feature Flags</string>
     <string name="privacy_policy_title">Privacy Policy (GDPR)</string>
+    <string name="legal_notes_title">Legal Disclaimer</string>
+    <string name="disclaimer_text">The application is provided \"as is\", without warranty of any kind. The developer is not responsible for any data loss, malfunctions, or any damage arising from the use of Bibi Mail.</string>
 </resources>

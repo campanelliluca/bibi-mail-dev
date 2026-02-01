@@ -930,4 +930,6 @@
     <string name="debug_feature_flags">DEBUG: Flag Caratteristiche</string>
     <string name="print_message_action">Stampa</string>
     <string name="privacy_policy_title">Informativa Privacy (GDPR)</string>
+    <string name="legal_notes_title">Disclaimer legale</string>
+    <string name="disclaimer_text">L\'applicazione è fornita \"così com\'è\", senza garanzie di alcun tipo. Lo sviluppatore non è responsabile per perdite di dati, malfunzionamenti o qualsiasi danno derivante dall\'uso di Bibi Mail.</string>
 </resources>
