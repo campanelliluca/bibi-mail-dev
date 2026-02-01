@@ -11,75 +11,31 @@ if (testCoverageEnabled) {
 }
 
 android {
-    namespace = "com.fsck.k9"
+    // Il namespace serve per le risorse interne (R.java)
+    namespace = "it.fabersoft.bibimail"
 
     defaultConfig {
-        applicationId = "com.fsck.k9"
-        testApplicationId = "com.fsck.k9.tests"
+        // Questo è l'ID UNICO che Google Play ha richiesto di cambiare
+        applicationId = "it.fabersoft.bibimail"
+        testApplicationId = "it.fabersoft.bibimail.tests"
 
         versionCode = 39004
-        versionName = "17.0"
-        versionNameSuffix = "a1"
+        versionName = "1.0.0"
 
-        buildConfigField("String", "CLIENT_INFO_APP_NAME", "\"K-9 Mail\"")
+        // Ho rimosso il suffisso 'a1' per avere una versione pulita su Play Store
+        versionNameSuffix = ""
+
+        // Identifica l'app correttamente nelle info client
+        buildConfigField("String", "CLIENT_INFO_APP_NAME", "\"Bibi Mail\"")
     }
 
     androidResources {
-        // Keep in sync with the resource string array "supported_languages"
         localeFilters += listOf(
-            "ar",
-            "be",
-            "bg",
-            "br",
-            "ca",
-            "co",
-            "cs",
-            "cy",
-            "da",
-            "de",
-            "el",
-            "en",
-            "en-rGB",
-            "eo",
-            "es",
-            "et",
-            "eu",
-            "fa",
-            "fi",
-            "fr",
-            "fy",
-            "ga",
-            "gd",
-            "gl",
-            "hr",
-            "hu",
-            "in",
-            "is",
-            "it",
-            "iw",
-            "ja",
-            "ko",
-            "lt",
-            "lv",
-            "nb",
-            "nl",
-            "nn",
-            "pl",
-            "pt-rBR",
-            "pt-rPT",
-            "ro",
-            "ru",
-            "sk",
-            "sl",
-            "sq",
-            "sr",
-            "sv",
-            "ta-rIN",
-            "tr",
-            "uk",
-            "vi",
-            "zh-rCN",
-            "zh-rTW",
+            "ar", "be", "bg", "br", "ca", "co", "cs", "cy", "da", "de", "el", "en",
+            "en-rGB", "eo", "es", "et", "eu", "fa", "fi", "fr", "fy", "ga", "gd",
+            "gl", "hr", "hu", "in", "is", "it", "iw", "ja", "ko", "lt", "lv",
+            "nb", "nl", "nn", "pl", "pt-rBR", "pt-rPT", "ro", "ru", "sk", "sl",
+            "sq", "sr", "sv", "ta-rIN", "tr", "uk", "vi", "zh-rCN", "zh-rTW",
         )
     }
 
@@ -99,6 +55,7 @@ android {
         }
 
         debug {
+            // In debug l'ID sarà it.fabersoft.bibimail.debug
             applicationIdSuffix = ".debug"
             enableUnitTestCoverage = testCoverageEnabled
             enableAndroidTestCoverage = testCoverageEnabled
@@ -168,7 +125,6 @@ dependencies {
     debugImplementation(projects.backend.demo)
     debugImplementation(projects.feature.autodiscovery.demo)
 
-    // Required for DependencyInjectionTest
     testImplementation(projects.feature.account.api)
     testImplementation(projects.feature.account.common)
     testImplementation(projects.plugins.openpgpApiLib.openpgpApi)
