@@ -12,7 +12,7 @@ if (testCoverageEnabled) {
 
 android {
     // Il namespace serve per le risorse interne (R.java)
-    namespace = "it.fabersoft.bibimail"
+    namespace = "com.fsck.k9"
 
     defaultConfig {
         // Questo è l'ID UNICO che Google Play ha richiesto di cambiare
